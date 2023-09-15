@@ -15,12 +15,7 @@ export const options: AuthOptions = {
         password: { label: "Password: ", type: "password", placeholder: "password" }
       },
       async authorize(credentials, req) {
-        const user = {
-          id: "22",
-          name: "John Doe",
-          email: "jdoe@example.com",
-          password: "nextauth"
-        };
+        const user = { id: "22", name: "John Doe", password: "nextauth" };
 
         if (credentials?.username === user.name && credentials.password === user.password) {
           return user;
